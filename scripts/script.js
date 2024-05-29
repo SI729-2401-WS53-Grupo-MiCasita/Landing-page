@@ -1,3 +1,20 @@
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.help-center-questions .question .toggle-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const answer = button.previousElementSibling;
+            answer.classList.toggle('show');
+
+            const icon = button.querySelector('i');
+            if (icon.classList.contains('fa-chevron-right')) {
+                icon.classList.remove('fa-chevron-right');
+                icon.classList.add('fa-chevron-down');
+            } else {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-right');
+            }
+        });
+    });
+});
 function toggleMenu() {
     var menu = document.getElementById('menu');
     var button = document.querySelector('.hamburger');
@@ -9,3 +26,4 @@ function toggleMenu() {
         button.classList.add('is-active');
     }
 }
+
