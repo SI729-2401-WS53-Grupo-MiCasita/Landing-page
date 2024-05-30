@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+.contact-section {
+    width: 100%;
+    height: 100vh;
+    background-color: #EBE7F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.image-micasita {
+    left: 1002px;
+    top: 90px;
+    object-fit: cover;
+    position: absolute;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+form {
+    width: 550px;
+    height: 600px;
+    position: absolute;
+    left: 200px;
+    top: 183px;
+    padding: 40px;
+    background-color: #34216b;
+    border-radius: 20px;
+    animation: slideInRight 1s ease-in-out;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    padding: 20px;
+    border: none;
+    border-radius: 200px;
+    box-sizing: border-box;
+    animation: fadeIn 1s ease-in-out;
+}
+
+textarea {
+    height: 100px;
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    border-radius: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+button {
+    width: 20%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #EBE7F3;
+    color: #342166;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: bounceIn 1s ease-in-out;
+}
+
+button:hover {
+    background-color: #D854A5;
+    color: #EBE7F3;
+    transform: scale(1.05);
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.form-group {
+    font-family: 'DM Sans', sans-serif;
+    font-size: large;
+    flex: 1;
+}
+
+label {
+    display: block;
+    color: #FFF;
+    margin-bottom: 5px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h2 {
+    color: #EBE7F3;
+    text-align: left;
+    font-size: 56px;
+    font-family: 'DM Sans', sans-serif;
+    margin-top: 0%;
+    margin-right: 0%;
+    margin-bottom: 0%;
+    animation: slideInDown 1s ease-in-out;
+}
+
+p {
+    color: #EBE7F3;
+    text-align: justify;
+    font-size: 18px;
+    font-family: 'DM Sans', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 20px;
+    animation: slideInUp 1s ease-in-out;
+}
+
+.enviar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+    }
+
+    form {
+        width: 90%;
+        height: auto; 
+        position: relative;
+        left: 0;
+        top: 1em;
+        padding: 20px;
+    }
+
+    .form-row {
+        flex-direction: column; 
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .image-micasita {
+        display: none;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }

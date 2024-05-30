@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Casita - Contacto</title>
+    <link rel="stylesheet" href="/styles/contactpage.css">
+    <link rel="stylesheet" href="/styles/index.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="/img/micasita-icon.png" alt="MiCasita" class="logo" draggable="false">
+            <nav>
+                <div class="menu-button">
+                    <button class="hamburger hamburger--squeeze" type="button" onclick="toggleMenu()">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+                <ul id="menu">
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="about-us.html">Sobre</a></li>
+                    <li><a href="contact-page.html">Contacto</a></li>
+                    <li><a href="help-center.html">Centro de Ayuda</a></li>
+                    <li><a href=# class="underline-link">Registrar</a></li>
+                    <li><a href=# class="access-button">Acceder</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="contact-section">
+        <form>
+            <h2>Contactanos hoy</h2>
+            <br>
+            <p>Únete a nuestra familia de universitarios que tienen un hogar para culminar sus estudios, personas
+                confiables y tu seguridad primero.</p>
+            <br>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre">
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="telefono">Telefono</label>
+                    <input type="text" id="telefono" name="telefono">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email">
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje"></textarea>
+            </div>
+            <br>
+            <button class="Enviar" type="submit">Enviar</button>
+        </form>
+    </div>
+    <div class="image-micasita">
+        <img src="/img/contactimage.jpg" alt="MiCasita" width="900" height="900">
+    </div>
+</body>
+
+</html>
