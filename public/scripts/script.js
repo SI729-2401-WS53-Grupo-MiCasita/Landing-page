@@ -27,3 +27,14 @@ function toggleMenu() {
     }
 }
 
+window.onload = function() {
+    var popup = document.getElementById('popup');
+    var close = document.getElementById('close');
+    close.onclick = function() {
+        popup.style.display = 'none';
+    };
+    setInterval(function() {
+        popup.style.display = 'block';
+    }, 10000); 
+};
+
