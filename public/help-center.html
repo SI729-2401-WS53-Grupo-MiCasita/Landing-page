@@ -39,14 +39,14 @@
         <div class="help-center-container">
             <div class="help-center-text-content">
                 <h1>Preguntas Frecuentes</h1>
-                <p>¡Bienvenido a MiCasita! Esatmos aquí para brindarte toda la información que necesitas para hacer que
-                    tu experiencia de busqueda de vivienda sea lo mas facil y satisfactoria posible. A continuación,
+                <p>¡Bienvenido a MiCasita! Estamos aquí para brindarte toda la información que necesitas para hacer que
+                    tu experiencia de búsqueda de vivienda sea lo más fácil y satisfactoria posible. A continuación,
                     encontrarás una serie de preguntas frecuentes que hemos recopilado para ayudarte a comprender mejor
                     cómo funciona nuestra plataforma y cómo puede beneficiarte en tu búsqueda de hogar.</p>
             </div>
 
             <div class="help-center-questions">
-                <div class="question">
+                <div class="question" onclick="toggleAnswer(this)">
                     <h3>¿Cómo puedo empezar a buscar propiedades en MiCasita?</h3>
                     <p>Para empezar a buscar propiedades en MiCasita, simplemente visita nuestra página web <a
                             href="https://micasita-frontend.web.app/"
@@ -54,7 +54,7 @@
                     </p>
                     <button class="toggle-button"><i class="fas fa-chevron-right"></i></button>
                 </div>
-                <div class="question">
+                <div class="question" onclick="toggleAnswer(this)">
                     <h3>¿Qué tipo de propiedades puedo encontrar en MiCasita?¿Hay opciones para alquilar y comprar?
                     </h3>
                     <p>Para contactar a un vendedor, debes acceder al anuncio que te interesa y hacer clic en el
@@ -64,15 +64,15 @@
                     <button class="toggle-button"><i class="fas fa-chevron-right"></i></button>
 
                 </div>
-                <div class="question">
-                    <h3>¿Qué debo hacer si encuentro un problema tecnico mientras uso la plataforma?</h3>
+                <div class="question" onclick="toggleAnswer(this)">
+                    <h3>¿Qué debo hacer si encuentro un problema técnico mientras uso la plataforma?</h3>
                     <p>Para solicitar asistencia, puedes contactarnos a través de nuestro correo electrónico o
                         número de
                         teléfono. También puedes visitar nuestra oficina en horario de atención al cliente.</p>
                     <button class="toggle-button"><i class="fas fa-chevron-right"></i></button>
 
                 </div>
-                <div class="question">
+                <div class="question" onclick="toggleAnswer(this)">
                     <h3>¿Ofrecen servicios adicionales, como asesoramiento legal o financiero para la compra de una
                         propiedad?</h3>
                     <p>Para solicitar asistencia, puedes contactarnos a través de nuestro correo electrónico o
@@ -81,6 +81,11 @@
                     <button class="toggle-button"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
+        </div>
+        <div id="popup" style="display: none; position: fixed; width: 300px; height: 300px; background: #EBE7F3;border-radius: 10px ;z-index: 1000; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1);font-family: 'DM Sans', sans-serif;font-size: 20px;">
+            <button id="close" style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 20px;">&times;</button>
+            <img src="/public/img/contactimage.jpg" alt="Imagen" style="width: 200px; height: auto;">
+            <p>Regístrate en mi casita para saber más</p>
         </div>
     </section>
     <footer class="footer-section">
@@ -99,7 +104,7 @@
                 </ul>
             </div>
             <div class="footer-navigator">
-                <h3>NAVEGACION</h3>
+                <h3>NAVEGACIÓN</h3>
                 <ul>
                     <li><a href="/public/index.html">Inicio</a></li>
                     <li><a href="/public/about-us.html">Sobre</a></li>
@@ -110,14 +115,22 @@
             <div class="footer-contact">
                 <h3>CONTACTO</h3>
                 <ul>
-                    <li><a href=#>Correo</a></li>
-                    <li><a href=#>Telefono</a></li>
-                    <li><a href=#>Direccion</a></li>
+                    <li><a href="#">Correo</a></li>
+                    <li><a href="#">Teléfono</a></li>
+                    <li><a href="#">Dirección</a></li>
                 </ul>
             </div>
         </div>
     </footer>
     <script src="/public/scripts/script.js"></script>
+    <script>
+        function toggleAnswer(element) {
+            const p = element.querySelector('p');
+            const button = element.querySelector('.toggle-button');
+            p.classList.toggle('show');
+            button.classList.toggle('down');
+        }
+    </script>
 </body>
 
 </html>
