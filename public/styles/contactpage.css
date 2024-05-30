@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+}
 .contact-section {
     width: 100%;
     height: 100vh;
@@ -9,116 +13,103 @@
     align-items: center;
     animation: fadeIn 2s ease-in-out;
 }
-
 .image-micasita {
-    left: 1002px;
+    left: 964px;
     top: 90px;
     object-fit: cover;
     position: absolute;
     animation: slideInLeft 1s ease-in-out;
 }
-
 form {
-    width: 550px;
-    height: 600px;
+    width: 350px; 
+    height: auto;
     position: absolute;
-    left: 200px;
-    top: 183px;
-    padding: 40px;
+    left: 250px;
+    top: 120px;
+    padding: 30px; 
     background-color: #34216b;
-    border-radius: 20px;
+    border-radius: 10px;
     animation: slideInRight 1s ease-in-out;
 }
-
 input[type="text"],
 input[type="email"],
 textarea {
     width: calc(100% - 20px);
     margin-bottom: 10px;
-    padding: 20px;
+    padding: 10px; 
     border: none;
-    border-radius: 200px;
+    border-radius: 50px;
     box-sizing: border-box;
     animation: fadeIn 1s ease-in-out;
 }
-
 textarea {
-    height: 100px;
+    height: 80px; 
     width: calc(100% - 20px);
     margin-bottom: 10px;
-    border-radius: 20px;
+    border-radius: 10px;
     animation: fadeIn 1s ease-in-out;
 }
-
 .contact-section button {
-    width: 20%;
-    padding: 15px;
+    width: 100px;
+    padding: 10px; 
     border: none;
-    border-radius: 10px;
+    border-radius: 50px;
     background-color: #EBE7F3;
     color: #342166;
-    font-size: 16px;
+    font-size: 14px; 
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
     animation: bounceIn 1s ease-in-out;
 }
-
 .contact-section button:hover {
     background-color: #D854A5;
     color: #EBE7F3;
     transform: scale(1.05);
 }
-
 .form-row {
     display: flex;
     justify-content: space-between;
     gap: 10px;
     animation: fadeIn 1s ease-in-out;
 }
-
 .form-group {
     font-family: 'DM Sans', sans-serif;
     font-size: large;
     flex: 1;
 }
-
 label {
     display: block;
     color: #FFF;
     margin-bottom: 5px;
     animation: fadeIn 1s ease-in-out;
 }
-
 h2 {
     color: #EBE7F3;
     text-align: left;
-    font-size: 56px;
+    font-size: 30px; 
     font-family: 'DM Sans', sans-serif;
+    top: 0;
     margin-top: 0%;
     margin-right: 0%;
-    margin-bottom: 0%;
+    margin-bottom: 10px; 
     animation: slideInDown 1s ease-in-out;
 }
-
 p {
     color: #EBE7F3;
     text-align: justify;
-    font-size: 18px;
+    font-size: 12px;
     font-family: 'DM Sans', sans-serif;
     font-style: italic;
     font-weight: 300;
     margin-bottom: 20px;
     animation: slideInUp 1s ease-in-out;
 }
-
 .enviar {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
 }
-
-
 
 @media screen and (max-width: 768px) {
     .contact-section {
@@ -213,3 +204,4 @@ p {
     to {
         transform: translateY(0);
     }
+}
