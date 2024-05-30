@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+/*document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.help-center-questions .question .toggle-button').forEach(button => {
         button.addEventListener('click', () => {
             const answer = button.previousElementSibling;
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
-});
+});*/
 function toggleMenu() {
     var menu = document.getElementById('menu');
     var button = document.querySelector('.hamburger');
@@ -27,14 +27,14 @@ function toggleMenu() {
     }
 }
 
-window.onload = function() {
+window.onload = function () {
     var popup = document.getElementById('popup');
     var close = document.getElementById('close');
-    close.onclick = function() {
+    close.onclick = function () {
         popup.style.display = 'none';
     };
-    setInterval(function() {
+    setInterval(function () {
         popup.style.display = 'block';
-    }, 10000); 
+    }, 10000);
 };
 
