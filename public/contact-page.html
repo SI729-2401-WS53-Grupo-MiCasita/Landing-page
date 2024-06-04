@@ -27,30 +27,29 @@
         const db = firebase.firestore();
     </script>
 </head>
-
+<header>
+    <div class="header-container">
+        <img src="/public/img/micasita-icon.png" alt="MiCasita" class="logo" draggable="false">
+        <nav>
+            <div class="menu-button">
+                <button class="hamburger hamburger--squeeze" type="button" onclick="toggleMenu()">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+            <ul id="menu">
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/public/about-us.html">Sobre</a></li>
+                <li><a href="/public/contact-page.html">Contacto</a></li>
+                <li><a href="/public/help-center.html">Centro de Ayuda</a></li>
+                <li><a href="https://micasita-frontend.web.app/" class="underline-link">Registrar</a></li>
+                <li><a href="https://micasita-frontend.web.app/" class="access-button">Acceder</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 <body>
-    <header>
-        <div class="header-container">
-            <img src="/public/img/micasita-icon.png" alt="MiCasita" class="logo" draggable="false">
-            <nav>
-                <div class="menu-button">
-                    <button class="hamburger hamburger--squeeze" type="button" onclick="toggleMenu()">
-                        <span class="hamburger-box">
-                            <span class="hamburger-inner"></span>
-                        </span>
-                    </button>
-                </div>
-                <ul id="menu">
-                    <li><a href="/index.html">Inicio</a></li>
-                    <li><a href="/public/about-us.html">Sobre</a></li>
-                    <li><a href="/public/contact-page.html">Contacto</a></li>
-                    <li><a href="/public/help-center.html">Centro de Ayuda</a></li>
-                    <li><a href="https://micasita-frontend.web.app/" class="underline-link">Registrar</a></li>
-                    <li><a href="https://micasita-frontend.web.app/" class="access-button">Acceder</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
     <div class="contact-section">
         <form>
             <h2>Contactanos hoy</h2>
@@ -81,12 +80,14 @@
                     <label for="mensaje">Mensaje</label>
                     <textarea id="mensaje" name="mensaje"></textarea>
                 </div>
+                <div class="send">
                 <button class="Enviar" type="submit">Enviar</button>
+                </div>
             </div>
         </form>
-    </div>
-    <div class="image-micasita">
-        <img src="/public/img/contactimage.jpg" alt="MiCasita" width="555" height="620">
+        <div class="image-micasita">
+            <img src="/public/img/contactimage.jpg" alt="MiCasita">
+        </div>
     </div>
     <script>
         const contactForm = document.querySelector('form');
